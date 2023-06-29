@@ -51,4 +51,4 @@ public:
 		}
 		else if (element > parent->info) // if the value in the data field of the new node is greater than that of the parent 
 		{
-			parent->rightchild = newNode; //make
+			parent->rightchild = newNode; //make the right child of the parent point to the new node
