@@ -10,11 +10,11 @@ public:
 	Node* rightchild;
 
 	// Constructor for the node class Node
-	(string i, Node* 1, Node* r)
+	Node (string i, Node* 1,Node* r)
 	{
 		info = i;
 		leftchild = 1;
-		right child = r;
+		rightchild = r;
 	}
 };
 
@@ -35,8 +35,8 @@ public:
 		newNode->leftchild = NULL; //make to the data field of the new node
 		newNode->rightchild = NULL; // make the right child of the new node point to null
 
-		node* parent = NULL;
-		node* currentNode = NULL;
+		Node* parent = NULL;
+		Node* currentNode = NULL;
 		search(element, parent, currentNode); //locate the Node which will be the parent of the node to be inserted
 
 		if (parent == NULL) //if the parent is NULL (tree is empty)
@@ -162,6 +162,11 @@ int main()
 		}
 		case '5':
 			return 0;
+		default :
+		{
+			cout << "invalid option" << endl;
+			break;
+		}
 		}
 	}
 }
