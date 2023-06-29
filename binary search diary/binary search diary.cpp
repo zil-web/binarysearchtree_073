@@ -65,9 +65,9 @@ public:
 		{
 			parent = currentNode;
 			if (element < currentNode->info)
-					currentNode = currentNode->leftchild;
-				else
-					currentNode = currentNode->rightchild;
+				currentNode = currentNode->leftchild;
+			else
+				currentNode = currentNode->rightchild;
 		}
 	}
 
@@ -103,10 +103,19 @@ public:
 
 	void preorder(Node* ptr)
 	{
+		//performs the postorder traversal of the tree
 		if (ROOT == NULL)
 		{
+			cout << "tree is empty" << endl;
+			return;
+		}
+		if (ptr != NULL)
+		{
+			postorder(ptr->leftchild);
+			postorder(ptr->rightchild);
 			cout << ptr->info << " ";
-			preorder(ptr->leftchild);
-			preorder(ptr->rightchild);
 		}
 	}
+};
+
+	
