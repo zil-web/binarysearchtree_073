@@ -35,5 +35,7 @@ public:
 		newNode->leftchild = NULL; //make to the data field of the new node
 		newNode->rightchild = NULL; // make the right child of the new node point to null
 
-		node
+		node* parent = NULL;
+		node* currentNode = NULL;
+		search(element, parent, currentNode); //locate the Node which will be the parent of the node to be inserted
 	 
