@@ -30,7 +30,7 @@ public:
 
 	void insert(string element) // Insert a node in the binary search tree
 	{
-		Node* newNode = new Node (element, NULL, NULL); // Allocate memory for the new node newNode->info = element; // Assign value to the data field of the new node newNode->left child = NULL; // Make the left child of the new node point to NULL newNode->rightchild = NULL; // Make the right child of the new node point to NULL
+		Node* newNode = new Node(element, NULL, NULL); // Allocate memory for the new node newNode->info = element; // Assign value to the data field of the new node newNode->left child = NULL; // Make the left child of the new node point to NULL newNode->rightchild = NULL; // Make the right child of the new node point to NULL
 		newNode->info = element; // assign value to the data field of the new node
 		newNode->leftchild = NULL; //make to the data field of the new node
 		newNode->rightchild = NULL; // make the right child of the new node point to null
@@ -52,3 +52,10 @@ public:
 		else if (element > parent->info) // if the value in the data field of the new node is greater than that of the parent 
 		{
 			parent->rightchild = newNode; //make the right child of the parent point to the new node
+		}
+	}
+
+
+	void search(string element, Node*& parent, Node*& currentNode)
+	{
+		// this function search the currentNode of the specified Node as well as the current node of its parent
