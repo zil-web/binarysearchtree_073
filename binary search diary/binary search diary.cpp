@@ -118,4 +118,9 @@ public:
 	}
 };
 
+int main()
+{
+	binary tree obj;
+}
+
 	
